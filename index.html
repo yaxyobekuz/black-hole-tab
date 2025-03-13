@@ -12,8 +12,8 @@
     />
     <link
       rel="icon"
-      type="image/png"
       sizes="128x128"
+      type="image/png"
       href="./public/favicon/main-128x128.png"
     />
     <link
@@ -37,12 +37,13 @@
     <link rel="stylesheet" href="./src/styles/minimalize/index.css" />
   </head>
 
-  <body>
+  <body style="background-color: black">
     <!-- Black Hole -->
     <div class="experience"></div>
 
     <!-- Content -->
     <main class="container">
+      <!-- Main content -->
       <div class="content">
         <!-- Searchbox -->
         <form id="searchbox" class="searchbox">
@@ -72,11 +73,94 @@
           <!-- Button -->
           <button class="search-button">Qidirish</button>
         </form>
+
+        <!-- Shortcuts -->
+        <div class="shortcuts-wrapper">
+          <!-- Shortcuts list -->
+          <ul id="shortcuts" class="shortcuts"></ul>
+
+          <!-- Add shortcut btn  -->
+          <div class="shortcut-item">
+            <button id="add-shortcut-btn" class="shortcut-item-inner">
+              <!-- Icon -->
+              <span class="shortcut-icon-wrapper">
+                <img
+                  width="32"
+                  height="32"
+                  alt="Qo'shish"
+                  class="shortcut-icon plus-icon"
+                  src="./src/assets/icons/plus.svg"
+                />
+              </span>
+
+              <!-- Name -->
+              <span class="shortcut-name">Yorliq qo'shish</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div role="alertdialog" class="modal hidden" id="modal">
+        <div class="modal-container">
+          <!-- Title -->
+          <h2 class="modal-title">Yorliq qo'shish</h2>
+
+          <!-- Form -->
+          <form id="modal-form" class="modal-form">
+            <div class="modal-item">
+              <!-- Label -->
+              <label for="name-input" class="input-label">Nom *</label>
+
+              <!-- Input -->
+              <input
+                required
+                autofocus
+                type="text"
+                name="name"
+                maxlength="16"
+                id="name-input"
+                autocomplete="off"
+                class="name-input"
+                name="shortcut-name"
+              />
+            </div>
+
+            <div class="modal-item">
+              <!-- Label -->
+              <label for="url-input" class="input-label">Havola *</label>
+
+              <!-- Input -->
+              <input
+                required
+                type="url"
+                id="url-input"
+                class="url-input"
+                autocomplete="off"
+                name="shortcut-url"
+                name="shortcut-url"
+              />
+            </div>
+
+            <!-- Footer -->
+            <div class="modal-footer">
+              <!-- Cancel button -->
+              <button type="button" class="cancel-btn" id="cancel-btn">
+                Bekor qilish
+              </button>
+
+              <!-- Action button -->
+              <button type="submit" class="action-btn" id="action-btn">
+                Qo'shish
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </main>
 
     <!-- Scripts -->
     <script src="./src/scripts/minimalize/black-hole.js"></script>
-    <script src="./src/scripts/minimalize/index.js"></script>
+    <script type="module" src="./src/scripts/minimalize/index.js"></script>
   </body>
 </html>
