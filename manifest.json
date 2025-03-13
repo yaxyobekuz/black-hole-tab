@@ -1,0 +1,9 @@
+{
+  "manifest_version": 3,
+  "name": "Qora Tuynuk",
+  "version": "1.0",
+  "description": "Chromeda yangi tab sahifasini o'zgartiradi.",
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  }
+}
