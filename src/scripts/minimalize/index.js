@@ -1,0 +1,1 @@
+const elSearchbox=document.querySelector("#searchbox");elSearchbox.addEventListener("submit",e=>{e.preventDefault();let t=e.target.querySelector("#search-input"),r=t?.value?.trim();if(r?.length>0){let l=encodeURIComponent(r);window.location.href=`https://www.google.com/search?q=${l}`}});
