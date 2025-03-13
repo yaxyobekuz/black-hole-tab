@@ -12,6 +12,24 @@ body {
   background: #000;
 }
 
+ul {
+  list-style-type: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: initial;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hidden {
+  display: none !important;
+}
+
 .container {
   max-width: 768px;
   width: 100%;
@@ -42,6 +60,7 @@ body {
   background: rgba(60, 60, 60, 0.5);
   backdrop-filter: blur(32px);
   padding: 6px;
+  margin: 0 auto 32px;
   border-radius: 100px;
   transition: background-color 100ms ease-in-out;
 }
@@ -86,7 +105,6 @@ body {
   border-radius: 100px;
   outline: none;
   color: #ffffff;
-  cursor: pointer;
   transition: background-color 0.2s ease-in-out;
 }
 
@@ -95,10 +113,140 @@ body {
   background: rgba(0, 0, 0, 0.5);
 }
 
-/* Clears the ‘X’ from search input */
 :is(input[type="search"])::-webkit-search-decoration,
 ::-webkit-search-cancel-button,
 ::-webkit-search-results-button,
 ::-webkit-search-results-decoration {
   display: none;
+}
+
+/* Shortcuts */
+
+.shortcuts-wrapper,
+.shortcuts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.shortcut-item-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 124px;
+  height: 112px;
+  background: rgba(60, 60, 60, 0.5);
+  backdrop-filter: blur(32px);
+  border: none;
+  border-radius: 14px;
+}
+
+.shortcut-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  overflow: hidden;
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.shortcut-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+}
+
+.shortcut-icon.plus-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.shortcut-name {
+  font-size: 14px;
+  color: #fff;
+  font-weight: normal;
+}
+
+/* Modal */
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  inset: 0 0 0 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  color: white;
+  backdrop-filter: blur(20px);
+}
+
+.modal-container {
+  max-width: 512px;
+  width: 100%;
+  background: rgba(60, 60, 60, 0.5);
+  backdrop-filter: blur(32px);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.modal-title {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.modal-item {
+}
+
+.input-label {
+  display: inline-block;
+  margin-bottom: 8px;
+  opacity: 0.7;
+}
+
+.modal-item input {
+  display: block;
+  width: 100%;
+  height: 40px;
+  background: rgba(60, 60, 60, 0.5);
+  padding: 0px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  outline: none;
+  color: white;
+}
+
+.modal-item input:focus {
+  border-color: white;
+}
+
+.modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 16px;
+  width: 100%;
+}
+
+.modal-footer button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 132px;
+  height: 40px;
+  background: rgba(60, 60, 60, 0.5);
+  border-radius: 100px;
+  color: white;
 }
