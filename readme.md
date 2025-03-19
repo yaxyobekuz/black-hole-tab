@@ -62,7 +62,7 @@ Simply open `index.html` in your browser to view the project.
 ## 📞 **Contact**
 
 If you have any questions or feedback, feel free to reach out:  
-📧 Email: [pubgn9642@gmail.com](mailto:pubgn9642@gmail.com)  
+📧 Email: [info@yaxyobekk.uz](mailto:info@yaxyobekk.uz)  
 🔗 Website: [yaxyobekk.uz](https://yaxyobekk.uz/en)
 
 (👥 Black Hole Animation – Developed by Three.js Authors | Project Owner: Yaxyobek)
